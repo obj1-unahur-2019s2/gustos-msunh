@@ -1,0 +1,42 @@
+import personas.*
+import objetos.*
+
+test "lo que le gusta a Rosa" {
+
+	assert.that(rosa.leGusta(pelota))
+	assert.that(rosa.leGusta(remera))
+	munieco.peso(2000)
+	assert.that(rosa.leGusta(munieco))
+	munieco.peso(2001)
+	assert.notThat(rosa.leGusta(munieco))
+
+}
+
+test " lo que le gusta a estefania "{
+	
+	placa.peso(1000)
+	placa.color(rojo)
+	assert.that(estefania.leGusta(placa))
+	assert.that(estefania.leGusta(biblioteca))
+	
+}
+
+test " lo que le gusta a Luisa"{
+	
+	assert.that(luisa.leGusta(placa))
+	assert.that(luisa.leGusta(munieco))
+	assert.notThat(luisa.leGusta(remera))
+	assert.notThat(luisa.leGusta(pelota))
+	
+}
+
+test " lo que le gusta a juan "{
+	assert.that(juan.leGusta(pelota))
+	assert.that(juan.leGusta(munieco))
+	placa.peso(1500)
+	placa.color(celeste)
+	assert.that(juan.leGusta(placa))
+	assert.notThat(juan.leGusta(biblioteca))
+	assert.notThat(juan.leGusta(remera))
+	
+}
